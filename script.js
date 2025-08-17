@@ -83,3 +83,20 @@ window.addEventListener("click", (e) => {
     modal.style.display = "none";
   }
 });
+// Toggle mobile nav
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+menuToggle.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+});
+
+// Close menu after clicking a link
+const navItems = document.querySelectorAll("#nav-links a");
+
+navItems.forEach(item => {
+  item.addEventListener("click", () => {
+    navLinks.classList.remove("show");
+  });
+});
+
