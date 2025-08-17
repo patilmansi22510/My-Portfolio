@@ -1,0 +1,371 @@
+/* General Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f5f7fa;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Fix for sticky navbar overlap */
+html {
+  scroll-padding-top: 80px; /* adjust based on header height */
+}
+
+header {
+  background: #222;
+  color: #fff;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  color: #fff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.hero .highlight {
+  color: #ffcc00;
+}
+
+/* Sections (Card Style for All) */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+section:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  color: #6a11cb;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+  justify-content: center;
+}
+
+.about-img img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #6a11cb;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h3 {
+  margin-top: 20px;
+  color: #6a11cb;
+  border-bottom: 2px solid #6a11cb;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.about-text ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.about-text ul li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+/* Skills Section */
+.skills-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.skill {
+  margin: 15px 0;
+}
+
+.skill span {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.skill-bar {
+  background: #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.skill-bar .fill {
+  height: 100%;
+  width: 0; /* start hidden */
+  background: linear-gradient(to right, #6a11cb, #2575fc);
+  border-radius: 8px;
+  transition: width 2s ease;
+}
+
+/* Experience Section */
+.experience-card {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  margin-bottom: 20px;
+}
+
+.experience-card h3 {
+  margin: 0;
+  color: #2575fc;
+}
+
+.experience-card h3 span {
+  color: #6a11cb;
+  font-weight: normal;
+}
+
+.experience-card .duration {
+  font-size: 14px;
+  color: #777;
+  margin: 5px 0 15px;
+}
+
+.experience-card ul {
+  padding-left: 20px;
+}
+
+.experience-card ul li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+}
+/* Projects Section */
+.project-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.project-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  margin: 0 0 10px;
+  color: #2575fc;
+}
+
+.project-card .project-desc {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.project-card h4 {
+  margin-top: 15px;
+  color: #6a11cb;
+}
+
+.project-card ul {
+  padding-left: 20px;
+}
+
+.project-card ul li {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+/* Education Section */
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+  margin: 40px auto;
+  max-width: 700px;
+}
+
+.education-container::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #6a11cb, #2575fc);
+  border-radius: 2px;
+}
+
+.education-card {
+  position: relative;
+  background: #fff;
+  padding: 20px 20px 20px 60px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 1s ease;
+}
+
+.education-card.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.education-card::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 25px;
+  width: 15px;
+  height: 15px;
+  background: #2575fc;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.education-card .year {
+  font-weight: bold;
+  color: #6a11cb;
+  font-size: 14px;
+}
+
+.education-card h3 {
+  margin: 5px 0;
+  color: #2575fc;
+}
+
+.education-card p {
+  margin: 3px 0;
+  color: #555;
+}
+
+.education-card .score {
+  font-weight: bold;
+  color: #333;
+}
+/* Certifications Section (Timeline Style like Education) */
+.certification-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  position: relative;
+  margin: 40px auto;
+  max-width: 700px;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 2000;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+  from {transform: scale(0.7);}
+  to {transform: scale(1);}
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 50px;
+  color: #fff;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.caption {
+  text-align: center;
+  color: #ddd;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
